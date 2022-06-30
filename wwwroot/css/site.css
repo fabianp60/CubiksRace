@@ -8,5 +8,5 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #8EC5FC;
-    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    background-image: radial-gradient( circle 900px at 50.7% -7.5%,  rgba(118,203,217,1) 0.3%, rgba(13,59,128,1) 100.2% );
 }
