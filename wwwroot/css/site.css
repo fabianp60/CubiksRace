@@ -4,6 +4,8 @@
   }
 
 body {
+    /*overflow: hidden;*/
+    overscroll-behavior: contain;
     width: 100vw;
     height: 100vh;
     margin: 0;
