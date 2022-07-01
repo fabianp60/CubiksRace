@@ -21,6 +21,7 @@ export default class Game {
         this.domHeader = document.querySelector('header');
         this.domGameSection = document.querySelector('section.game-section');
         this.domFooter = document.querySelector('footer div.game-footer');
+        this.domInfo = document.querySelector('div.info');
     }
 
     _initUiSize() {
@@ -49,6 +50,8 @@ export default class Game {
     _onWindowResize() {
         this._initUiSize();
         this._refreshUi();
+        this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
+                                  <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
     
     _currentTemplate() {
@@ -60,6 +63,9 @@ export default class Game {
         this.domHeader.innerHTML = curTemplate.headerTemplate();
         this.domGameSection.innerHTML = curTemplate.gamesectionTemplate();
         this.domFooter.innerHTML = curTemplate.footerTemplate();
+
+        this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
+                                  <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
 
     _refreshUi() {
