@@ -26,11 +26,11 @@ export default class Game {
 
     _initUiSize() {
         if(window.innerWidth < window.innerHeight) {
-            this.uiSize.width = window.innerWidth - 20;
-            this.uiSize.height = window.innerHeight - 20;
+            this.uiSize.width = window.innerWidth;
+            this.uiSize.height = window.innerHeight;
         } else {
-            this.uiSize.width = Math.floor((window.innerHeight/this.defaultUiSize.height)*this.defaultUiSize.width) - 20;
-            this.uiSize.height = window.innerHeight - 20;
+            this.uiSize.width = Math.floor((window.innerHeight/this.defaultUiSize.height)*this.defaultUiSize.width);
+            this.uiSize.height = window.innerHeight;
         }
     }
 
@@ -48,8 +48,7 @@ export default class Game {
         this._initUiSize();
         this._refreshUi();
         this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
-                                    <p>Win Screen AvailSize (W: ${window.screen.availWidth}px, H: ${window.screen.availHeight}px)</p>
-                                    <p>Screen Size (W: ${window.screen.width}px, H: ${window.screen.height}px)</p>
+                                    <p>VisualViewPort (W: ${window.visualViewport.width}, H: ${window.visualViewport.height})</p>
                                     <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
     
@@ -64,8 +63,7 @@ export default class Game {
         this.domFooter.innerHTML = curTemplate.footerTemplate();
 
         this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
-                                    <p>Win Screen AvailSize (W: ${window.screen.availWidth}px, H: ${window.screen.availHeight}px)</p>
-                                    <p>Screen Size (W: ${window.screen.width}px, H: ${window.screen.height}px)</p>
+                                    <p>VisualViewPort (W: ${window.visualViewport.width}, H: ${window.visualViewport.height})</p>
                                     <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
 
