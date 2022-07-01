@@ -48,7 +48,9 @@ export default class Game {
         this._initUiSize();
         this._refreshUi();
         this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
-                                  <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
+                                    <p>Win Screen AvailSize (W: ${window.screen.availWidth}px, H: ${window.screen.availHeight}px)</p>
+                                    <p>Screen Size (W: ${window.screen.width}px, H: ${window.screen.height}px)</p>
+                                    <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
     
     _currentTemplate() {
@@ -62,7 +64,9 @@ export default class Game {
         this.domFooter.innerHTML = curTemplate.footerTemplate();
 
         this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
-                                  <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
+                                    <p>Win Screen AvailSize (W: ${window.screen.availWidth}px, H: ${window.screen.availHeight}px)</p>
+                                    <p>Screen Size (W: ${window.screen.width}px, H: ${window.screen.height}px)</p>
+                                    <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
 
     _refreshUi() {
