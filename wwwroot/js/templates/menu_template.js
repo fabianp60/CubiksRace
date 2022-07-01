@@ -8,6 +8,23 @@ export default class MenuTemplate extends TemplateInterface {
     }
 
     gamesectionTemplate() {
-        return `0-0`;
+        return `<div class="menu-buttons-container">
+                    <div class="menu-button">
+                        <img src="wwwroot/images/UI/TextoJuegoRapido.png" alt="Juego Rapido">
+                    </div>
+                    <div class="menu-button">
+                        <img src="wwwroot/images/UI/TextoMultijugador.png" alt="Multijugador">
+                    </div>
+                    <div class="menu-button">
+                        <img src="wwwroot/images/UI/TextoSalir.png" alt="Salir">
+                    </div> 
+                </div>`;
+    }
+
+    footerTemplate() {
+        return `<div class="menu-footer-container">
+                    <img src="wwwroot/images/UI/PodiumIcon.png" alt="Ranking">
+                    <img src="wwwroot/images/UI/ConfigIcon.png" alt="Configurar">
+                </div>`;
     }
 }
