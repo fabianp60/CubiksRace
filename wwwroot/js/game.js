@@ -26,14 +26,11 @@ export default class Game {
 
     _initUiSize() {
         if(window.innerWidth < window.innerHeight) {
-            this.uiSize.width = window.innerWidth;
-            this.uiSize.height = window.innerHeight;
-        } else if(window.innerHeight < window.innerWidth) {
-            this.uiSize.width = Math.floor((window.innerHeight/this.defaultUiSize.height)*this.defaultUiSize.width);
-            this.uiSize.height = window.innerHeight;
+            this.uiSize.width = window.innerWidth - 20;
+            this.uiSize.height = window.innerHeight - 20;
         } else {
-            this.uiSize.width = window.innerWidth;
-            this.uiSize.height = Math.floor((window.innerWidth/this.defaultUiSize.width)*this.defaultUiSize.height);
+            this.uiSize.width = Math.floor((window.innerHeight/this.defaultUiSize.height)*this.defaultUiSize.width) - 20;
+            this.uiSize.height = window.innerHeight - 20;
         }
     }
 

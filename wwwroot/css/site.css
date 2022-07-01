@@ -1,11 +1,16 @@
 :root {
     --reference-width: 480;
     --reference-height: 800;
-  }
+}
+
+html, body {
+    overflow: hidden;
+}
+body {
+    position: relative;
+}
 
 body {
-    /*overflow: hidden;*/
-    overscroll-behavior: contain;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -48,7 +53,7 @@ div.dialog {
 }
 
 div.info {
-    background-color: rgba(147, 163, 2, 0.5);
+    background-color: rgba(177, 33, 33, 0.5);
     min-width: 100px;
     min-height: 20px;
     position: absolute;
@@ -66,6 +71,7 @@ section.game-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
 }
 .social-media a {
     color: white;
