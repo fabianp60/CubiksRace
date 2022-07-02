@@ -49,19 +49,7 @@ header, section, footer {
 }
 
 div.dialog {
-    visibility: hidden;
-}
-
-div.info {
-    background-color: rgba(177, 33, 33, 0.5);
-    min-width: 100px;
-    min-height: 20px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    padding: 0.25rem 1rem;
-    font-size: x-small;
-    color: beige;
+    display: none;
 }
 
 section.game-section {

@@ -25,6 +25,7 @@ export default class Game {
     }
 
     _initUiSize() {
+        this.topMargin = window.innerHeight - document.body.clientHeight;;
         if(window.innerWidth < window.innerHeight) {
             this.uiSize.width = window.innerWidth;
             this.uiSize.height = window.innerHeight;
@@ -37,6 +38,7 @@ export default class Game {
     _initUi() {
         this.domMain.style.width = this.uiSize.width + "px";
         this.domMain.style.height = this.uiSize.height + "px";
+        this.domMain.style.marginTop = this.topMargin + "px";
         this._drawTemplate();
     }
 
@@ -47,9 +49,6 @@ export default class Game {
     _onWindowResize() {
         this._initUiSize();
         this._refreshUi();
-        this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
-                                    <p>VisualViewPort (W: ${window.visualViewport.width}, H: ${window.visualViewport.height})</p>
-                                    <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
     
     _currentTemplate() {
@@ -61,10 +60,6 @@ export default class Game {
         this.domHeader.innerHTML = curTemplate.headerTemplate();
         this.domGameSection.innerHTML = curTemplate.gamesectionTemplate();
         this.domFooter.innerHTML = curTemplate.footerTemplate();
-
-        this.domInfo.innerHTML = `<p>Win Size (W: ${window.innerWidth}px, H: ${window.innerHeight}px)</p>
-                                    <p>VisualViewPort (W: ${window.visualViewport.width}, H: ${window.visualViewport.height})</p>
-                                    <p>UI Size (W: ${this.uiSize.width}px, H: ${this.uiSize.height}px)</p>`;
     }
 
     _refreshUi() {
